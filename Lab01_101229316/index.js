@@ -1,19 +1,24 @@
 const fs = require('fs');
 
 //Delete File
-function deleteFile(filePath) {
+async function deleteFile(filePath) {
   try {
-    fs.unlink(filePath, function (err){
-      if(err) console.log('error', err);
-    });
-    console.log(`Deleted ${filePath}`);
+    if(fs.existsSync(filePath)){
+      await fs.unlink(filePath, function (err){
+        if(err) console.log('error', err);
+      });
+      console.log(`Deleted ${filePath}`);
+    }
   } catch (error) {
     console.error(`Got an error trying to delete the file: ${error.message}`);
   }
 }
 
-var output1 = [];
-var output2 = [];
+deleteFile('canada.txt');
+deleteFile('usa.txt');
+
+var canadaLines = [];
+var usaLines = [];
 var lineReader = require('readline').createInterface({
   input: require('fs').createReadStream('input_countries.csv')
 });
@@ -21,35 +26,28 @@ var lineReader = require('readline').createInterface({
 lineReader.on('line', function (line) {
     var jsonFromLine = {};
     var lineSplit = line.split(',');
-    // select columns you want
-    jsonFromLine.req = lineSplit[0];
-    jsonFromLine.column1 = lineSplit[1];
-    jsonFromLine.column2 = lineSplit[2];
+    jsonFromLine.country = lineSplit[0];
+    jsonFromLine.year = lineSplit[1];
+    jsonFromLine.population = lineSplit[2];
     //filter canada
-    if (jsonFromLine.req === 'Canada') {
-      (async function () {
-        output1.push("\n" + jsonFromLine.req + ', ' + jsonFromLine.column1 + ', ' + jsonFromLine.column2);
-        await countryFilter(output1, 'canada');
-      })();
+    if (jsonFromLine.country === 'Canada') {
+        canadaLines.push("\n" + jsonFromLine.country + ', ' + jsonFromLine.year + ', ' + jsonFromLine.population);
     }
-    if(jsonFromLine.req === 'United States'){
-      (async function () {
-        output2.push("\n" + jsonFromLine.req + ', ' + jsonFromLine.column1 + ', ' + jsonFromLine.column2);
-        await countryFilter(output2, 'usa');
-      })();
+    if(jsonFromLine.country === 'United States'){
+        usaLines.push("\n" + jsonFromLine.country + ', ' + jsonFromLine.year + ', ' + jsonFromLine.population);
     }
+
 });
 
 lineReader.on('close', function (line) {
-    console.log(output1); // list output
-    console.log(output2);
+    writeFile(canadaLines, 'canada');
+    writeFile(usaLines, 'usa');
 });
 
-async function countryFilter(output, countryName) {
+async function writeFile(output, fileName) {
   try {
     const title = 'country, year, population'
-    const csvLine = `${output}`
-    await fs.writeFile(`${countryName}.txt`, title + csvLine, { flag:'a'}, function(err){
+    await fs.writeFile(`${fileName}.txt`, title + output, { flag:'a'}, function(err){
       if(err) console.log('error', err);
     });
   } catch (error) {
@@ -57,5 +55,3 @@ async function countryFilter(output, countryName) {
   }
 }
 
-deleteFile('canada.txt');
-deleteFile('usa.txt');

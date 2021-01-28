@@ -1,59 +1,4 @@
 country, year, population
-Canada, 1952, 14785584country, year, population
-Canada, 1952, 14785584,
-Canada, 1957, 17010154,
-Canada, 1962, 18985849,
-Canada, 1967, 20819767country, year, population
-Canada, 1952, 14785584,
-Canada, 1957, 17010154country, year, population
-Canada, 1952, 14785584,
-Canada, 1957, 17010154,
-Canada, 1962, 18985849country, year, population
-Canada, 1952, 14785584,
-Canada, 1957, 17010154,
-Canada, 1962, 18985849,
-Canada, 1967, 20819767,
-Canada, 1972, 22284500country, year, population
-Canada, 1952, 14785584,
-Canada, 1957, 17010154,
-Canada, 1962, 18985849,
-Canada, 1967, 20819767,
-Canada, 1972, 22284500,
-Canada, 1977, 23796400,
-Canada, 1982, 25201900country, year, population
-Canada, 1952, 14785584,
-Canada, 1957, 17010154,
-Canada, 1962, 18985849,
-Canada, 1967, 20819767,
-Canada, 1972, 22284500,
-Canada, 1977, 23796400country, year, population
-Canada, 1952, 14785584,
-Canada, 1957, 17010154,
-Canada, 1962, 18985849,
-Canada, 1967, 20819767,
-Canada, 1972, 22284500,
-Canada, 1977, 23796400,
-Canada, 1982, 25201900,
-Canada, 1987, 26549700country, year, population
-Canada, 1952, 14785584,
-Canada, 1957, 17010154,
-Canada, 1962, 18985849,
-Canada, 1967, 20819767,
-Canada, 1972, 22284500,
-Canada, 1977, 23796400,
-Canada, 1982, 25201900,
-Canada, 1987, 26549700,
-Canada, 1992, 28523502,
-Canada, 1997, 30305843country, year, population
-Canada, 1952, 14785584,
-Canada, 1957, 17010154,
-Canada, 1962, 18985849,
-Canada, 1967, 20819767,
-Canada, 1972, 22284500,
-Canada, 1977, 23796400,
-Canada, 1982, 25201900,
-Canada, 1987, 26549700,
-Canada, 1992, 28523502country, year, population
 Canada, 1952, 14785584,
 Canada, 1957, 17010154,
 Canada, 1962, 18985849,
@@ -65,15 +10,4 @@ Canada, 1987, 26549700,
 Canada, 1992, 28523502,
 Canada, 1997, 30305843,
 Canada, 2002, 31902268,
-Canada, 2007, 33390141country, year, population
-Canada, 1952, 14785584,
-Canada, 1957, 17010154,
-Canada, 1962, 18985849,
-Canada, 1967, 20819767,
-Canada, 1972, 22284500,
-Canada, 1977, 23796400,
-Canada, 1982, 25201900,
-Canada, 1987, 26549700,
-Canada, 1992, 28523502,
-Canada, 1997, 30305843,
-Canada, 2002, 31902268
+Canada, 2007, 33390141
