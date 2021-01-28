@@ -1,0 +1,21 @@
+{
+  "name": "lab01_101229316",
+  "version": "1.0.0",
+  "description": "lab exercise 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lab",
+    "exercise",
+    "fs",
+    "file",
+    "system"
+  ],
+  "author": "karin",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^3.0.0"
+  }
+}
