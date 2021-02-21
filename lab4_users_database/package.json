@@ -1,0 +1,23 @@
+{
+  "name": "lab-exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karinz112/lab-exercises.git"
+  },
+  "author": "karin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karinz112/lab-exercises/issues"
+  },
+  "homepage": "https://github.com/karinz112/lab-exercises#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.17"
+  }
+}

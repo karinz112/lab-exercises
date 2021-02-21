@@ -7,9 +7,8 @@ const app = express();
 app.get('/restaurants', async (req, res) => {
   //Select Specific Column
   const restaurants = await restaurantModel.find({})
-  
     .select()
-    console.log(restaurants)
+  
   try {
     res.status(200).send(restaurants);
   } catch (err) {
